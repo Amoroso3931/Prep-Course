@@ -127,7 +127,7 @@ function esImpar(num) {
   // Tu código:
   var num=23;
   var impar=num%2;
-  else(impar=0);{
+  if(impar>0);{
        "Es impar"
 }
 }
