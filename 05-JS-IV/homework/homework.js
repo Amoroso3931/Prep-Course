@@ -159,7 +159,7 @@ function pasarUsuarioAPremium (usuarios) {
     usuario1 = {
       esPremium="true"
     }
-     usuario2 = {
+    usuario2 = {
       esPremium="true"
     }
   }
