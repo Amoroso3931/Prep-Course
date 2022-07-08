@@ -8,12 +8,29 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
+  function Usuario(nombre, email, password) {
+    this.nombre = nombre;
+    this.email = email;
+    this.password = password; 
+  }
+  Usuario.prototype.saludar = function(){
+    return "Hola mi nombre es " + this.nombre;
+  }
+  var usuario1 = new Usuario("Tomas", "Tomi@gmail.com", 1234);
+  var usuario2 = new Usuario("Leon", "Leon@gmail.com", 4321);
+
+  console.log(usuario1.saludar());
+  console.log(usuario2.saludar());
 }
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+  agregarMetodoPrototype = {}
+  agregarMetodoPrototype.prototype.saludar = function(){
+    return "Hola world!"
+  }
 }
 
 function agregarStringInvertida() {
@@ -22,6 +39,8 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+ 
+   
 }
 
 // ---------------------------------------------------------------------------//
@@ -36,9 +55,16 @@ function agregarStringInvertida() {
     //  }
 
   class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
-
+    constructor(nombre, apellido, edad, domicilio ) {
+     this.nombre = nombre;
+     this.apellido = apellido;
+     this.edad = edad;
+     this.domicilio = domicilio;
+     this.detalle = function(){
+      return "Mi nombre y apellido es "+this.nombre+" "+this.apellido+" tengo "+this.edad+" años y vivo en "+this.domicilio;
+     } 
+     var persona1 = new Persona("Tomas","Amoroso",18,"Saavedra 123");
+     console.log(persona1.detalle());
     }
 }
 
@@ -46,6 +72,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
+  var persona2 = new Persona("Leon","Benitez",32,"Saavedra 345");
+  console.log(persona2.detalle());
 }
   
 function agregarMetodo() {
